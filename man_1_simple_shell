@@ -1,1 +1,59 @@
-Not empty
+.\" Manpage for Simple Shell.
+
+.TH "HSH - SIMPLE SHELL" 1 "22 December 2023" "Version 1.0" "Linux Programmer's Manual"
+
+.SH NAME
+hsh - A Simple Shell, UNIX command line interpreter.
+
+.SH SYNOPSIS
+.IP "Interactive Mode:" 0.4i
+.BI "./hsh [command] [argument...]"
+
+.IP "Non-Interactive Mode:"
+.br
+.BI "echo [command] [arguments...] | ./hsh"
+
+.SH DESCRIPTION
+hsh is a basic Unix shell program implemented in C. It provides an interactive command-line interface where users can execute system commands, use built-in commands, and work with environment variables.
+
+.SH COMMAND EXCUTION
+
+Once a user inputs a command and hits enter, the shell performs the following actions:
+
+1. Displaying the prompt.
+
+2. Reading the command.
+
+3. Command interpretation.
+When locating a command, the shell looks for a built-in command by that name.
+If a built-in command is not found, the shell searches for the command in the PATH.
+
+4. Command execution (executed in a child process of the main process).
+
+5. Waiting for the command to finish.
+
+.SH BUILT-IN
+.IP "The hsh interpreter implement the following built-ins:" 0.4i
+env \- prints the current environment
+.br
+exit \- exit the shell
+.br
+
+.SH EXAMPLES
+.IP "Interactive Mode:" 0.4i
+.B "./hsh"
+.br
+.B "$ ls -l -a"
+
+.IP "Non-Interactive Mode:"
+.br
+.B echo "/bin/ls" | ./hsh
+
+.SH NOTES
+This is a basic shell intended for educational purposes. 
+
+.SH SEE ALSO
+sh(1), dash(1)
+
+.SH AUTHORS
+Axel Sowa
