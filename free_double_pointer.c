@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * free_double_pointer - Frees memory allocated for a double pointer.
@@ -18,7 +17,9 @@ void free_double_pointer(char **double_pointer)
 
 	for (index = 0; double_pointer[index] != NULL; index++)
 	{
+		/* Free each element of the double pointer */
 		free(double_pointer[index]);
 	}
+	/* Free the double pointer itself */
 	free(double_pointer);
 }
