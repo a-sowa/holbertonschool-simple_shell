@@ -1,5 +1,6 @@
 #ifndef HEADER_H
 #define HEADER_H
+
 #define TOKEN_DELIMITER " \t\n"
 #define SIZE 64
 
