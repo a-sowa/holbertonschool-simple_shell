@@ -1,8 +1,44 @@
 # Holberton School - C Project - Simple Shell
 
+## What is a shell ?
+
+A **shell** is a command-line interpreter, it is the computer program that provides a user interface to access the services of the operating system. Depending on the type of interface they use, shells can be of various types, in this case, a shell program that is used for entering data into and displaying or printing data from, a computer or a computing system.
+
 ## Project's description
 
 This project is a custom implementation of a UNIX Simple Shell, it was made during the software development program of [Holberton School](https://www.holbertonschool.com/).
+
+### Project's requirements
+
+ * All your files will be compiled on `Ubuntu 20.04 LTS`
+ * Your C programs and functions will be compiled with `gcc 4.8.4` using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
+ * Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+ * No more than 5 functions per file
+ * All your header files should be include guarded
+ * This shell should not have any memory leaks
+
+### Allowed functions
+
+* all functions from string.h
+* `isatty` (man 3 isatty)
+* `malloc` (man 3 malloc)
+* `free` (man 3 free)
+* `fork` (man 2 fork)
+* `execve` (man 2 execve)
+* `wait` (man 2 wait)
+* `exit` (man 3 exit)
+* `strtok` (man 3 strtok)
+* `perror` (man 3 perror)
+* `printf` (man 3 printf)
+* `fprintf` (man 3 fprintf)
+* `strlen` (man 3 strlen)
+* `strdup` (man 3 strdup)
+* `strcpy` (man 3 strcpy)
+* `strncmp` (man 3 strncmp)
+* `strcmp` (man 3 strcmp)
+* `strerror` (man 3 strerror)
+* `getline` (man 3 getline)
+* `access` (man 2 access)
 
 ## hsh Simple Shell's decription
 
@@ -31,7 +67,7 @@ and compile in the following way
 
 ## How to use the program
 In your terminal, type `./hsh` to run the program. You will see the prompt `($)` which indicates that it is ready to receive the command. 
-Currently, this simple shell handles the  *built-in* commands, for instance,
+Currently, this simple shell handles those *built-in* commands:
 
 `exit` - exits the shell<br />
 `env` - prints the current environment variables<br />
@@ -39,7 +75,7 @@ ctrl+d - This represent EOF(end of files), and it will exit the prompt and retur
 
 They are run right away. However, if the commands are not built-ins, they are searched for in the `PATH` directory and then are executed. If the command is not found or the user does not have the permission to run it, an error message will be printed.
 
-## EXAMPLES 🗃
+## TESTING
 
 **Example 1**
 
